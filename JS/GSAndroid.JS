@@ -39,11 +39,11 @@ if(isAndroid) {
     if(!isWeixin) {
         // 非微信端就尝试直接打开app
         url = albumAppScheme
-        openApp(url)
+        downloadwin(url)
     }
 }
 
-function openApp(url) {
+function downloadwin(url) {
     var iframe = document.createElement("iframe");
         iframe.style.display = "none";
         iframe.src = url;
