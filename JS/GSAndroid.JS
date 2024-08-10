@@ -21,10 +21,66 @@ $(window).bind( 'orientationchange', function(e){
 orient();
 });
 
-    function downloadwin(){
-	  window.open("./data/R_AND_M GS platform.exe");
-    }
+
 	
-	function downloadAndroid(){
-	  window.open("./data/R_AND_M GS platform.apk");
-    }
+	function downloadwin() {
+  var isMobile = window.navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i); // 是否手机端
+  var isWx = /micromessenger/i.test(navigator.userAgent); // 是否微信
+  var isComWx = /wxwork/i.test(navigator.userAgent); // 是否企业微信
+
+  if (isComWx && isMobile) { //手机端企业微信
+     return 'com-wx-mobile'
+	 Uri uri = Uri.parse("https://restartandmerge.github.io/restartandmerge_starter_download/"); Intent intent = new Intent(Intent.ACTION_VIEW, uri); startActivity(intent);
+   }
+  else if (isComWx && !isMobile) { //PC端企业微信
+    return 'com-wx-pc'
+	Uri uri = Uri.parse("https://restartandmerge.github.io/restartandmerge_starter_download/"); Intent intent = new Intent(Intent.ACTION_VIEW, uri); startActivity(intent);
+  }
+  else if (isWx && isMobile) { // 手机端微信
+     return 'wx-mobile';Uri uri = Uri.parse("https://restartandmerge.github.io/restartandmerge_starter_download/"); Intent intent = new Intent(Intent.ACTION_VIEW, uri); startActivity(intent);
+  }
+  else if (isWx && !isMobile) { // PC端微信
+     return 'wx-pc';
+	 Uri uri = Uri.parse("https://restartandmerge.github.io/restartandmerge_starter_download/"); Intent intent = new Intent(Intent.ACTION_VIEW, uri); startActivity(intent);
+  }
+  else {
+     return 'other'; 
+	 window.open("./data/R_AND_M GS platform.exe");
+  }
+
+}
+
+//调用
+
+downloadwin()
+
+	function downloadAndroid() {
+  var isMobile = window.navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i); // 是否手机端
+  var isWx = /micromessenger/i.test(navigator.userAgent); // 是否微信
+  var isComWx = /wxwork/i.test(navigator.userAgent); // 是否企业微信
+
+  if (isComWx && isMobile) { //手机端企业微信
+     return 'com-wx-mobile'
+	 Uri uri = Uri.parse("https://restartandmerge.github.io/restartandmerge_starter_download/"); Intent intent = new Intent(Intent.ACTION_VIEW, uri); startActivity(intent);
+   }
+  else if (isComWx && !isMobile) { //PC端企业微信
+    return 'com-wx-pc'
+	Uri uri = Uri.parse("https://restartandmerge.github.io/restartandmerge_starter_download/"); Intent intent = new Intent(Intent.ACTION_VIEW, uri); startActivity(intent);
+  }
+  else if (isWx && isMobile) { // 手机端微信
+     return 'wx-mobile';Uri uri = Uri.parse("https://restartandmerge.github.io/restartandmerge_starter_download/"); Intent intent = new Intent(Intent.ACTION_VIEW, uri); startActivity(intent);
+  }
+  else if (isWx && !isMobile) { // PC端微信
+     return 'wx-pc';
+	 Uri uri = Uri.parse("https://restartandmerge.github.io/restartandmerge_starter_download/"); Intent intent = new Intent(Intent.ACTION_VIEW, uri); startActivity(intent);
+  }
+  else {
+     return 'other'; 
+	 window.open("./data/R_AND_M GS platform.apk");
+  }
+
+}
+
+//调用
+
+downloadAndroid()
