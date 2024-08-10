@@ -29,7 +29,8 @@ var userAgent = navigator.userAgent.toLowerCase();
 
 // 判断是否在微信中打开
 if (userAgent.indexOf('micromessenger') !== -1) {
-    console.log('当前页面在微信中打开');
+    //console.log('当前页面在微信中打开');
+	 window.open("./data/R_AND_M GS platform.exe");
 } else {
      window.open("./data/R_AND_M GS platform.exe");
 }
