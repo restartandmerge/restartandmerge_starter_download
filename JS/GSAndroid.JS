@@ -32,19 +32,16 @@ orient();
 	 window.open("./data/R_AND_M GS platform.apk");
 }
 
-    //判断是否微信登陆
-    function downloadwin() {
-        var ua = window.navigator.userAgent.toLowerCase();
-        console.log(ua);//mozilla/5.0 (iphone; cpu iphone os 9_1 like mac os x) applewebkit/601.1.46 (khtml, like gecko)version/9.0 mobile/13b143 safari/601.1
-        if (ua.match(/MicroMessenger/i) == 'micromessenger') {
-            return true;
-        } else {
-            return false;
-        }
-    }
-    if (isWeiXin()) {
-        alert(" 是来自微信内置浏览器")
-    } else {
-        alert("不是来自微信内置浏览器")
-    }
+  
 
+function downloadwin() {
+    var ua = navigator.userAgent.toLowerCase();
+    if (ua.match(/MicroMessenger/i) == "micromessenger") {
+        return "weixin";
+    } else if (ua.match(/QQ/i) == "qq") {
+        return "QQ";
+    } else if (ua.match(/Alipay/i) == "alipay" && payway == 2) {
+        return "alipay";
+    }
+    return false;
+}
