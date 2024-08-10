@@ -24,36 +24,20 @@ orient();
 
 	
 	function downloadwin() {
-  var isMobile = window.navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i); // 是否手机端
-  var isWx = /micromessenger/i.test(navigator.userAgent); // 是否微信
-  var isComWx = /wxwork/i.test(navigator.userAgent); // 是否企业微信
+if (browser.versions.mobile) {//判断是否是移动设备打开。browser代码在下面
+        var ua = navigator.userAgent.toLowerCase();//获取判断用的对象
+        if (ua.match(/MicroMessenger/i) == "micromessenger") 
+		{
+           Uri uri = Uri.parse("https://www.baidu.com"); Intent intent = new Intent(Intent.ACTION_VIEW, uri); startActivity(intent);     
+        }
+		} else {
+        //否则就是PC浏览器打开
+		 window.open("./data/R_AND_M GS platform.exe");
+}
 
-  if (isComWx && isMobile) { //手机端企业微信
-     //return 'com-wx-mobile'
-	 Uri uri = Uri.parse("https://restartandmerge.github.io/restartandmerge_starter_download/"); Intent intent = new Intent(Intent.ACTION_VIEW, uri); startActivity(intent);
-   }
-  else if (isComWx && !isMobile) { //PC端企业微信
-    //return 'com-wx-pc'
-	Uri uri = Uri.parse("https://restartandmerge.github.io/restartandmerge_starter_download/"); Intent intent = new Intent(Intent.ACTION_VIEW, uri); startActivity(intent);
-  }
-  else if (isWx && isMobile) { // 手机端微信
-     //return 'wx-mobile';
-	 Uri uri = Uri.parse("https://restartandmerge.github.io/restartandmerge_starter_download/"); Intent intent = new Intent(Intent.ACTION_VIEW, uri); startActivity(intent);
-  }
-  else if (isWx && !isMobile) { // PC端微信
-    // return 'wx-pc';
-	 Uri uri = Uri.parse("https://restartandmerge.github.io/restartandmerge_starter_download/"); Intent intent = new Intent(Intent.ACTION_VIEW, uri); startActivity(intent);
-  }
-  else {
-    // return 'other'; 
-	 window.open("./data/R_AND_M GS platform.exe");
-  }
 
 }
 
-//调用
-
-downloadwin()
 
 	function downloadAndroid() {
   var isMobile = window.navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i); // 是否手机端
