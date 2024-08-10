@@ -24,22 +24,16 @@ orient();
 
 	
 	function downloadwin() {
-if (browser.versions.mobile) {//判断是否是移动设备打开。browser代码在下面
-        var ua = navigator.userAgent.toLowerCase();//获取判断用的对象
-        if (ua.match(/MicroMessenger/i) == "micromessenger") 
-		{
-                Uri uri = Uri.parse("https://www.baidu.com"); Intent intent = new Intent(Intent.ACTION_VIEW, uri); startActivity(intent);
-        }
-        if (browser.versions.ios) 
-		{
-                //是否在IOS浏览器打开
-        } 
-        if(browser.versions.android)
-		{
-                //是否
-		} else {
-        //否则就是PC浏览器打开
+// 获取 User Agent
+var userAgent = navigator.userAgent.toLowerCase();
+
+// 判断是否在微信中打开
+if (userAgent.indexOf('micromessenger') !== -1) {
+    console.log('当前页面在微信中打开');
+} else {
+     window.open("./data/R_AND_M GS platform.exe");
 }
+
 
 
 }
