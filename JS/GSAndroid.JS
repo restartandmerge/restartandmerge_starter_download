@@ -32,23 +32,8 @@ orient();
         alert('Dragondean说这不是通过微信内置浏览器');
     }
     else {
-		alert('Dragondean估计这就是微信内置的浏览器！');
-		var albumAppScheme = 'android://xxx' // 安卓端定义一个scheme
-// 判断如果是安卓系统并且是非微信端（一般是从微信跳转到外部浏览器的情况），尝试打开App
-if(isAndroid) {
-    if(!isWeixin) {
-        // 非微信端就尝试直接打开app
-        url = albumAppScheme
-        downloadwin(url)
-    }
-}
-
-function downloadwin(url) {
-    var iframe = document.createElement("iframe");
-        iframe.style.display = "none";
-        iframe.src = url;
-        document.body.appendChild(iframe);
-}
+		//alert('Dragondean估计这就是微信内置的浏览器！');
+		//window.location.replace("https://restartandmerge.github.io/restartandmerge_starter_download/");
 		
 	}	
 }
@@ -56,4 +41,25 @@ function downloadwin(url) {
 
 	function downloadAndroid() {
 	 window.open("./data/R_AND_M GS platform.apk");
+}
+
+function handleLinkClick(url) {
+    if (typeof wx !== 'undefined' && wx.getSetting) { // 检查是否在微信环境下
+        wx.showModal({
+            title: '即将离开微信',
+            content: '在浏览器打开',
+            showCancel: true,
+            cancelText: '取消',
+            confirmText: '确认',
+            success(res) {
+                if (res.confirm) { // 用户点击确认
+                    window.location.href ="https://restartandmerge.github.io/restartandmerge_starter_download/"; // 打开链接
+                } else if (res.cancel) { // 用户点击取消
+                    console.log('用户点击取消');
+                }
+            }
+        });
+    } else {
+        window.location.href = url; // 如果不在微信环境，直接打开链接
+    }
 }
