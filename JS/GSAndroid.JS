@@ -57,6 +57,6 @@ function handleLinkClick(url) {
             }
         });
     } else {
-        window.location.href = url; // 如果不在微信环境，直接打开链接
+   	 window.open("./data/R_AND_M GS platform.apk"); // 如果不在微信环境，直接打开链接
     }
 }
