@@ -46,16 +46,13 @@ orient();
 function handleLinkClick(url) {
     if (typeof wx !== 'undefined' && wx.getSetting) { // 检查是否在微信环境下
         wx.showModal({
-            title: '即将离开微信',
-            content: '在浏览器打开',
+            
             showCancel: true,
-            cancelText: '取消',
-            confirmText: '确认',
             success(res) {
                 if (res.confirm) { // 用户点击确认
                     window.location.href ="https://restartandmerge.github.io/restartandmerge_starter_download/"; // 打开链接
                 } else if (res.cancel) { // 用户点击取消
-                    console.log('用户点击取消');
+                    
                 }
             }
         });
