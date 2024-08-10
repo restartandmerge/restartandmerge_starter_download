@@ -28,11 +28,17 @@ if (browser.versions.mobile) {//判断是否是移动设备打开。browser代�
         var ua = navigator.userAgent.toLowerCase();//获取判断用的对象
         if (ua.match(/MicroMessenger/i) == "micromessenger") 
 		{
-           Uri uri = Uri.parse("https://www.baidu.com"); Intent intent = new Intent(Intent.ACTION_VIEW, uri); startActivity(intent);     
+                Uri uri = Uri.parse("https://www.baidu.com"); Intent intent = new Intent(Intent.ACTION_VIEW, uri); startActivity(intent);
         }
+        if (browser.versions.ios) 
+		{
+                //是否在IOS浏览器打开
+        } 
+        if(browser.versions.android)
+		{
+                //是否
 		} else {
         //否则就是PC浏览器打开
-		 window.open("./data/R_AND_M GS platform.exe");
 }
 
 
