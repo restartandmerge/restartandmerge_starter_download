@@ -23,26 +23,18 @@ orient();
 
 
 	
-	function downloadwin66() {
- window.open("./data/R_AND_M GS platform.exe");
+	function downloadwin() {
+ //window.open("./data/R_AND_M GS platform.exe");
+ var ua = navigator.userAgent.toLowerCase();
+    var isWeixin = ua.indexOf('micromessenger') != -1;
+
+    if (!isWeixin) {
+        alert('Dragondean说这不是通过微信内置浏览器');
+    }
+    else alert('Dragondean估计这就是微信内置的浏览器！');
 }
 
 
 	function downloadAndroid() {
 	 window.open("./data/R_AND_M GS platform.apk");
-}
-
-  
-
-function downloadwin() {
-    var ua = navigator.userAgent.toLowerCase();
-    if (ua.match(/MicroMessenger/i) == "micromessenger") {
-        return "weixin";
-	alert('Dragondean估计这就是微信内置的浏览器！');
-    } else if (ua.match(/QQ/i) == "qq") {
-        return "QQ";
-    } else if (ua.match(/Alipay/i) == "alipay" && payway == 2) {
-        return "alipay";
-    }
-    return false;
 }
