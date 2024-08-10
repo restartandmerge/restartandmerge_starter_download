@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head >
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+    <script>
+        function isMobile(){
+            if(window.navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)) {
+              return true; 
+            }else{
+              return false; 
+            }
+        }
+        
+        if(isMobile()){
+			var language =
+    localStorage.getItem("locale") ||
+    window.navigator.language.toLowerCase() ||
+    "en";
+  //把用户的语言写入缓存，供下次获取使用
+  localStorage.setItem("locale", language);
+  //判断用户的语言，跳转到不同的地方
+  if (language.indexOf("zh-") !== -1) {
+        location.href="GSAndroidZH.html"
+  } else if (language.indexOf("en") !== -1) {
+        location.href="GSAndroidEN.html"
+  }
+            
+        }else{
+			var language =
+    localStorage.getItem("locale") ||
+    window.navigator.language.toLowerCase() ||
+    "en";
+  //把用户的语言写入缓存，供下次获取使用
+  localStorage.setItem("locale", language);
+  //判断用户的语言，跳转到不同的地方
+  if (language.indexOf("zh") !== -1) {
+        location.href="GSWIN10ZH.html"
+  } else if (language.indexOf("en") !== -1) {
+        location.href="GSWIN10EN.html"
+  } 
+        }
+    </script>  
+
+</html>
