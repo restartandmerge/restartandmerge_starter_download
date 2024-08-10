@@ -42,7 +42,7 @@ orient();
             return false;
         }
     }
-    if (downloadwin()) {
+    if (isWeiXin()) {
         alert(" 是来自微信内置浏览器")
     } else {
         alert("不是来自微信内置浏览器")
