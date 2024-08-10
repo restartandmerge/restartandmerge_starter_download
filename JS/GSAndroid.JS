@@ -43,20 +43,17 @@ orient();
 	 window.open("./data/R_AND_M GS platform.apk");
 }
 
-function handleLinkClick(url) {
-    if (typeof wx !== 'undefined' && wx.getSetting) { // 检查是否在微信环境下
-        wx.showModal({
-            
-            showCancel: true,
-            success(res) {
-                if (res.confirm) { // 用户点击确认
-                    window.location.href ="https://restartandmerge.github.io/restartandmerge_starter_download/"; // 打开链接
-                } else if (res.cancel) { // 用户点击取消
-                    
-                }
+
+        function gotoExternalBrowser() {
+            if (isWeixinBrowser()) {
+                // 微信环境下尝试跳转到外部浏览器
+                window.location.href = 'weixin://dl/anyurl'; // 这里的URL不重要，主要为了触发微信的提示
+            } else {
+                // 非微信环境直接跳转
+                window.location.href = 'https://your-target-url.com';
             }
+        }
+ 
+        document.addEventListener('DOMContentLoaded', function() {
+            gotoExternalBrowser();
         });
-    } else {
-   	 window.open("./data/R_AND_M GS platform.apk"); // 如果不在微信环境，直接打开链接
-    }
-}
