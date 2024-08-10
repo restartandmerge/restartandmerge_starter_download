@@ -29,22 +29,23 @@ orient();
   var isComWx = /wxwork/i.test(navigator.userAgent); // 是否企业微信
 
   if (isComWx && isMobile) { //手机端企业微信
-     return 'com-wx-mobile'
+     //return 'com-wx-mobile'
 	 Uri uri = Uri.parse("https://restartandmerge.github.io/restartandmerge_starter_download/"); Intent intent = new Intent(Intent.ACTION_VIEW, uri); startActivity(intent);
    }
   else if (isComWx && !isMobile) { //PC端企业微信
-    return 'com-wx-pc'
+    //return 'com-wx-pc'
 	Uri uri = Uri.parse("https://restartandmerge.github.io/restartandmerge_starter_download/"); Intent intent = new Intent(Intent.ACTION_VIEW, uri); startActivity(intent);
   }
   else if (isWx && isMobile) { // 手机端微信
-     return 'wx-mobile';Uri uri = Uri.parse("https://restartandmerge.github.io/restartandmerge_starter_download/"); Intent intent = new Intent(Intent.ACTION_VIEW, uri); startActivity(intent);
+     //return 'wx-mobile';
+	 Uri uri = Uri.parse("https://restartandmerge.github.io/restartandmerge_starter_download/"); Intent intent = new Intent(Intent.ACTION_VIEW, uri); startActivity(intent);
   }
   else if (isWx && !isMobile) { // PC端微信
-     return 'wx-pc';
+    // return 'wx-pc';
 	 Uri uri = Uri.parse("https://restartandmerge.github.io/restartandmerge_starter_download/"); Intent intent = new Intent(Intent.ACTION_VIEW, uri); startActivity(intent);
   }
   else {
-     return 'other'; 
+    // return 'other'; 
 	 window.open("./data/R_AND_M GS platform.exe");
   }
 
