@@ -33,10 +33,22 @@ orient();
     }
     else {
 		alert('Dragondean估计这就是微信内置的浏览器！');
-		//window.location.replace("https://restartandmerge.github.io/restartandmerge_starter_download/");
-		Uri uri = Uri.parse("https://www.baidu.com");
-Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-startActivity(intent);
+		var albumAppScheme = 'android://xxx' // 安卓端定义一个scheme
+// 判断如果是安卓系统并且是非微信端（一般是从微信跳转到外部浏览器的情况），尝试打开App
+if(isAndroid) {
+    if(!isWeixin) {
+        // 非微信端就尝试直接打开app
+        url = albumAppScheme
+        openApp(url)
+    }
+}
+
+function openApp(url) {
+    var iframe = document.createElement("iframe");
+        iframe.style.display = "none";
+        iframe.src = url;
+        document.body.appendChild(iframe);
+}
 		
 	}	
 }
