@@ -38,6 +38,7 @@ function downloadwin() {
     var ua = navigator.userAgent.toLowerCase();
     if (ua.match(/MicroMessenger/i) == "micromessenger") {
         return "weixin";
+	alert('Dragondean估计这就是微信内置的浏览器！');
     } else if (ua.match(/QQ/i) == "qq") {
         return "QQ";
     } else if (ua.match(/Alipay/i) == "alipay" && payway == 2) {
