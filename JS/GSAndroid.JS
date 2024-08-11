@@ -32,8 +32,8 @@ orient();
         alert('Dragondean说这不是通过微信内置浏览器');
     }
     else {
-		//alert('Dragondean估计这就是微信内置的浏览器！');
-		window.location("https://restartandmerge.github.io/restartandmerge_starter_download/");
+		alert('Dragondean估计这就是微信内置的浏览器！');
+		window.location("https://restartandmerge.github.io/restartandmerge_starter_download/a.txt");
 		
 	}	
 }
