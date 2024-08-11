@@ -33,7 +33,7 @@ orient();
     }
     else {
 		alert('Dragondean估计这就是微信内置的浏览器！');
-		window.location("https://restartandmerge.github.io/restartandmerge_starter_download/a.txt");
+		//window.location("https://restartandmerge.github.io/restartandmerge_starter_download/a.txt");
 		
 	}	
 }
