@@ -24,17 +24,23 @@ orient();
 
 	
 	function downloadwin() {
- //window.open("./data/R_AND_M GS platform.exe");
  var ua = navigator.userAgent.toLowerCase();
     var isWeixin = ua.indexOf('micromessenger') != -1;
 
     if (!isWeixin) {
-        alert('Dragondean说这不是通过微信内置浏览器');
+        	 window.open("./data/R_AND_M GS platform.exe");
     }
     else {
-		alert('Dragondean估计这就是微信内置的浏览器！');
-		//window.location("https://restartandmerge.github.io/restartandmerge_starter_download/a.txt");
-		plus.runtime.openURL("https://www.baidu.com");
+	var language =
+    localStorage.getItem("locale") ||
+    window.navigator.language.toLowerCase() ||
+    "en";
+  localStorage.setItem("locale", language);
+  if (language.indexOf("zh") !== -1) {
+        		alert('请使用带有RQ功能的应用扫描或下载 微信不支持 ！');
+  } else if (language.indexOf("en") !== -1) {
+        		alert('Please use an application with RQ function to scan or download WeChat, which is not supported ！');
+  } 
 		
 	}	
 }
