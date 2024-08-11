@@ -18,9 +18,11 @@ body {
 <script>
 function hengshuping(){
   if(window.orientation==180||window.orientation==0){
-location.href="GSAndroidZH.html"
+location.href="GSAndroidZH.html"		
    }
 if(window.orientation==90||window.orientation==-90){
+        		alert('请旋转屏幕至竖屏');
+				 hengshuping();
     
     }
  }
@@ -29,16 +31,9 @@ window.addEventListener("onorientationchange" in window ? "orientationchange" : 
 </script>
 
 
-
-
-
-
-
-
-
 <div  class="Father_level_0">
     <div class="Father_level_title_LOGO11">
-      <aBT id="abc0" style="color:rgb(255, 255, 255)">请翻转设备屏幕</aBT>
+      <aBT id="abc0" style="color:rgb(255, 255, 255)"></aBT>
   </div>
 </div>
  

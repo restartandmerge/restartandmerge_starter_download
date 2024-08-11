@@ -18,9 +18,11 @@ body {
 <script>
 function hengshuping(){
   if(window.orientation==180||window.orientation==0){
-location.href="GSAndroidEN.html"
+location.href="GSAndroidZH.html"
    }
 if(window.orientation==90||window.orientation==-90){
+        		alert('Please rotate the screen to portrait mode');
+				 hengshuping();
     
     }
  }
@@ -38,7 +40,7 @@ window.addEventListener("onorientationchange" in window ? "orientationchange" : 
 
 <div  class="Father_level_0">
     <div class="Father_level_title_LOGO11">
-      <aBT id="abc0" style="color:rgb(255, 255, 255)">Please flip the device screen</aBT>
+      <aBT id="abc0" style="color:rgb(255, 255, 255)"></aBT>
   </div>
 </div>
  
