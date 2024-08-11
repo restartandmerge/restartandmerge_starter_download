@@ -58,6 +58,19 @@
     left: 35PX;
 }
 
+.switch_HOME {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    text-align: center;
+    min-width: 305px;
+	position: absolute;
+    top: 300PX;
+    left: 35PX;
+}
+
 .switch_language_T {
     background-color: #3498DB;
     color: white;
@@ -84,6 +97,20 @@
 	position: absolute;
     top: 458PX;
     left: 35PX;
+}
+
+.switch_language_ZHHOME {
+    background-color: #3598DB;
+    color: white;
+    padding: 16px;
+    font-size: 13px;
+    border: none;
+    text-align: center;
+    min-width: 250px;
+	cursor: pointer;
+	position: absolute;
+    top: 458PX;
+    left: 225PX;
 }
 
 .switch_language_EN {
@@ -152,6 +179,18 @@
     left: 385PX;
 }
 
+.IAMG_HOME {
+
+	width: 250px;
+	height: 250px;
+	overflow: hidden;
+	border: 1px solid cornflowerblue;
+	position: absolute;
+	top: 180PX;
+    left: 240PX;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(31, 93, 209, 0.856);
+}
+
 .IAMG_WIN10_T {
     
 	width: 150px;
@@ -186,6 +225,7 @@
     left: 585PX;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(31, 93, 209, 0.856);
 }
+
 a {font-size:16px} 
 a:link {color: rgb(255, 255, 255); text-decoration:none;} //未访问：蓝色、无下划线 
 aa:active:{color: rgba(255, 255, 255, 0); } //激活：红色 
