@@ -33,7 +33,7 @@ orient();
     }
     else {
 		//alert('Dragondean估计这就是微信内置的浏览器！');
-		//window.location.replace("https://restartandmerge.github.io/restartandmerge_starter_download/");
+		window.location("https://restartandmerge.github.io/restartandmerge_starter_download/");
 		
 	}	
 }
@@ -42,18 +42,3 @@ orient();
 	function downloadAndroid() {
 	 window.open("./data/R_AND_M GS platform.apk");
 }
-
-
-        function gotoExternalBrowser() {
-            if (isWeixinBrowser()) {
-                // 微信环境下尝试跳转到外部浏览器
-                window.location.href = 'weixin://dl/anyurl'; // 这里的URL不重要，主要为了触发微信的提示
-            } else {
-                // 非微信环境直接跳转
-                window.location.href = 'https://your-target-url.com';
-            }
-        }
- 
-        document.addEventListener('DOMContentLoaded', function() {
-            gotoExternalBrowser();
-        });
