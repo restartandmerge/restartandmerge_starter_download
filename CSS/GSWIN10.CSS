@@ -32,6 +32,22 @@
 	width: 1080PX;
 }
 
+.Father_level_title_LOGO3E {
+	position: absolute;
+	top: 260PX;
+    left: 430PX;
+    font-size: 18px;
+	width: 1080PX;
+}
+
+.Father_level_title_LOGO3Z {
+	position: absolute;
+	top: 260PX;
+    left: 485PX;
+    font-size: 18px;
+	width: 1080PX;
+}
+
 .switch_language {
     background-color: #3498DB;
     color: white;
