@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<title>R_AND_M  GS 启动器</title>
+</head>
+<body>
+<link rel="stylesheet" href="./CSS/GSAndroid.CSS">
+<script src="./JS/GSAndroid.JS"></script>
+
+<style>
+body {
+    background-color: #0968e4bb;
+}
+</style>
+
+<script>
+function hengshuping(){
+  if(window.orientation==180||window.orientation==0){
+
+   }
+if(window.orientation==90||window.orientation==-90){
+    location.href="GSAndroidZHNO.html"
+    }
+ }
+ hengshuping();
+window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", hengshuping, false);
+</script>
+
+
+<script>
+
+			function ShowIAMG_WIN10_TX() {
+				document.getElementById("IAMG_WIN10_TX").style.display="block";
+			}
+			function HiddIAMG_WIN10_TX(){
+				document.getElementById("IAMG_WIN10_TX").style.display="none";
+			}
+ 
+</script>
+
+<script>
+
+			function ShowIAMG_Android_TX() {
+				document.getElementById("IAMG_Android_TX").style.display="block";
+			}
+			function HiddIAMG_Android_TX(){
+				document.getElementById("IAMG_Android_TX").style.display="none";
+			}
+ 
+</script>
+
+<script>
+
+			function Showswitch_language() {
+				document.getElementById("switch_language_TX").style.display="block";
+			}
+			function Hiddswitch_language(){
+				document.getElementById("switch_language_TX").style.display="none";
+			}
+ 
+</script>
+
+<script>
+    function language_zh(){
+        window.location.href="GSAndroidZH.html";
+    }
+</script>
+
+<script>
+    function language_en(){
+        window.location.href="GSAndroidEN.html";
+    }
+</script>
+
+<script>
+    function github(){
+	  window.open("https://github.com/");
+    }
+</script>
+
+
+
+<div  class="Father_level_0">
+  <div class="Father_level_title_LOGO">
+      <aBT id="abc0" style="color:rgb(255, 255, 255)" class="DLC1BT">R_AND_M&#160;&#160;GS 启动器</aBT>
+  </div>
+    <div class="Father_level_title_LOGO1">
+      <aBT id="abc0" style="color:rgb(255, 255, 255)">游戏软件涵盖多种平台、功能和用途</aBT>
+  </div>
+    <div class="Father_level_title_LOGO2">
+      <aBT id="abc0" style="color:rgb(255, 255, 255)">扫描二维码或点击下载相应的平台应用程序</aBT>
+  </div>
+  
+     <div class="Father_level_title_LOGO3Z">
+      <aBT id="abc0" style="color:rgb(255, 255, 255)">推荐使用QR 扫描</aBT>
+  </div>
+  
+      <div onclick="github()" class="Hover_effect switch_github">
+       <aBT id="abc0" style="color:rgb(52, 152, 219)">github Go</aBT>
+  </div>
+  
+  <div class="switch_language">
+       <aBT id="abc0" style="color:rgb(255, 255, 255)">语言</aBT>
+  </div>
+    <div id="switch_language_TX" style="display:none" class="switch_language_T">
+       <aBT id="abc0" style="color:rgb(255, 255, 255)">语言</aBT>
+  </div>
+    <div onclick="language_zh()" readonly oncopy="return false" onmouseleave="Hiddswitch_language()" onmouseover="Showswitch_language()" class="Hover_effect switch_language_ZH">
+        <a  >中文</a>
+  </div>
+    <div onclick="language_en()" onmouseleave="Hiddswitch_language()" onmouseover="Showswitch_language()" class="Hover_effect switch_language_EN">
+        <a  >英文</a>
+  </div>
+  
+  <div onclick="downloadwin()" onmouseleave="HiddIAMG_WIN10_TX()" onmouseover="ShowIAMG_WIN10_TX()" class="Hover_effect_win10 download_win">
+      <awin href="" >↓&#160;&#160;&#160;Windows10</awin>
+  </div>
+  
+  <div onclick="downloadAndroid()" onmouseleave="HiddIAMG_Android_TX()" onmouseover="ShowIAMG_Android_TX()" class="Hover_effect_Android download_Android">
+      <awin href="" >↓&#160;&#160;&#160;安卓</awin>
+  </div>
+  
+  <div class="IAMG_WIN10">
+       <img  src="img/WIN10.png" >
+  </div>
+    <div id="IAMG_WIN10_TX" style="display:none" class="IAMG_WIN10_T">
+       <img  src="img/WIN10.png" >
+  </div> 
+  
+  <div class="IAMG_Android">
+       <img  src="img/Android.png" >
+  </div>
+    <div id="IAMG_Android_TX" style="display:none" class="IAMG_Android_T">
+       <img  src="img/Android.png" >
+  </div>
+  
+
+</div>
+ 
+</head>
+</html>
+
+
+
+
+
+
