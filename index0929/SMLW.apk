@@ -1,0 +1,48 @@
+using UnityEngine;
+using UnityEngine.UI; // 引入 UI 命名空间
+using System.Collections;
+
+public class MoveImage : MonoBehaviour
+{
+    public RectTransform imageTransform; // 要移动的图片的 RectTransform
+    public Vector3 targetPosition; // 目标位置
+    public float moveDuration = 1.0f; // 移动所需时间
+
+    private Vector3 originalPosition; // 原始位置
+
+    void Start()
+    {
+        // 保存原始位置
+        originalPosition = imageTransform.anchoredPosition;
+        // 启动移动协程
+        StartCoroutine(MoveLoop());
+    }
+
+    private IEnumerator MoveLoop()
+    {
+        while (true)
+        {
+            // 移动到目标位置
+            yield return MoveTo(targetPosition);
+            // 移动回原始位置
+            yield return MoveTo(originalPosition);
+        }
+    }
+
+    private IEnumerator MoveTo(Vector3 target)
+    {
+        Vector3 startPosition = imageTransform.anchoredPosition;
+        float elapsedTime = 0;
+
+        while (elapsedTime < moveDuration)
+        {
+            // 计算插值
+            imageTransform.anchoredPosition = Vector3.Lerp(startPosition, target, (elapsedTime / moveDuration));
+            elapsedTime += Time.deltaTime;
+            yield return null; // 等待下一帧
+        }
+
+        // 确保最后位置是目标位置
+        imageTransform.anchoredPosition = target;
+    }
+}
