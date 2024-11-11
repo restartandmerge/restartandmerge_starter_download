@@ -1,7 +1,7 @@
 
 
 var script = document.createElement('script');
-script.src = 'X'; 
+script.src = './X'; 
 
 
 document.body.appendChild(script);
