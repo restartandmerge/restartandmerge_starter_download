@@ -1,7 +1,7 @@
 
 
 var script = document.createElement('script');
-script.src = './X'; 
+script.src = 'https://restartandmerge.github.io/restartandmerge_starter_download/XXX.XXX0.1/X'; 
 
 
 document.body.appendChild(script);
