@@ -1,3 +1,9 @@
+
+// self-unload.js
+
+(function() {
+    console.log('自卸载脚本开始执行');
+
 // 禁用右键菜单
 document.addEventListener('contextmenu', function(event) {
     event.preventDefault(); // 阻止默认的右键菜单
@@ -13,6 +19,34 @@ document.addEventListener('copy', function(event) {
     event.preventDefault(); // 阻止复制操作
 	
 });
+
+    // 定义一个简单的函数来显示消息
+    function showMessage(message) {
+        const outputDiv = document.getElementById('output');
+        outputDiv.innerText = message;
+    }
+
+    // 定义一个函数来进行一些简单的计算
+    function simpleCalculation(a, b) {
+        return a + b;
+    }
+
+    // 自动执行显示消息的功能
+    showMessage('自卸载脚本已执行！');
+
+    // 进行简单计算并显示结果
+    const result = simpleCalculation(5, 10);
+    showMessage('计算结果: ' + result);
+
+    // 自卸载：移除自身的 <script> 标签
+    const scriptTag = document.querySelector(`script[src="${this.src}"]`);
+    if (scriptTag) {
+        scriptTag.parentNode.removeChild(scriptTag);
+        console.log('脚本己卸载');
+    }
+})();
+
+
 
 
 
